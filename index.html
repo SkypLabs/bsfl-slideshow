@@ -230,6 +230,38 @@ cmd "ls -al"
 					</section>
 				</section>
 
+				<section>
+					<section>
+						<h2>Network</h2>
+						<p><small>Test an IPv4 :</small></p>
+						<pre><code data-trim>
+cmd "is_ipv4 8.8.8.8"
+						</code></pre>
+					</section>
+					<section>
+						<h2>Network</h2>
+						<p><small>Test an IPv4 subnet :</small></p>
+						<pre><code data-trim>
+cmd "is_ipv4_subnet 192.168.1.0/24"
+						</code></pre>
+					</section>
+					<section>
+						<h2>Network</h2>
+						<p><small>Test a FQDN address :</small></p>
+						<pre><code data-trim>
+cmd "is_fqdn www.example.net"
+						</code></pre>
+					</section>
+					<section>
+						<h2>Network</h2>
+						<p><small>Convert an IPv4 mask into CIDR and vice versa :</small></p>
+						<pre><code data-trim>
+mask2cidr 255.255.255.0
+cidr2mask 24
+						</code></pre>
+					</section>
+				</section>
+
 			</div>
 
 		</div>
