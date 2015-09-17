@@ -211,6 +211,25 @@ msg "Thus, this message is logged in a file."
 					</section>
 				</section>
 
+				<section>
+					<section>
+						<h2>Commands</h2>
+						<p><small>Execute a simple command :</small></p>
+						<pre><code data-trim>
+cmd "ls -al"
+						</code></pre>
+						<p><small>The <b>cmd</b> function handles the output depending on the command's status</small></p>
+					</section>
+					<section>
+						<h2>Commands</h2>
+						<p><small>By default, the command's result is not displayed. To overwrite this behavior :</small></p>
+						<pre><code data-trim>
+DEBUG=y
+cmd "ls -al"
+						</code></pre>
+					</section>
+				</section>
+
 			</div>
 
 		</div>
