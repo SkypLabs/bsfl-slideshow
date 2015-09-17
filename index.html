@@ -147,6 +147,63 @@ msg_alert "This is a displayed message with its status using
 					</section>
 				</section>
 
+				<section>
+					<section>
+						<h2>Logs</h2>
+						<p><small>Log a simple message :</small></p>
+						<pre><code data-trim>
+log "This is a simple message to log."
+						</code></pre>
+					</section>
+					<section>
+						<h2>Logs</h2>
+						<p><small>With a status :</small></p>
+						<pre><code data-trim>
+log_critical "This is a logged message using 'log_critical'
+function."
+						</code></pre>
+					</section>
+					<section>
+						<h2>Logs</h2>
+						<p><small>By default, the messages are logged in a file in the current directory :</small></p>
+						<pre><code data-trim>
+declare LOG_FILE="$0.log"
+						</code></pre>
+						<p><small>For exemple, for <b>test.sh</b>, the log file will be <b>test.sh.log</b></small></p>
+						<p><small>You can overwrite this behavior :</small></p>
+						<pre><code data-trim>
+LOG_FILE="filename.log"
+						</code></pre>
+					</section>
+					<section>
+						<h2>Logs</h2>
+						<p><small>You can even log standard messages :</small></p>
+						<pre><code data-trim>
+LOG_ENABLED=y
+msg "Thus, this message is logged in a file."
+						</code></pre>
+					</section>
+					<section>
+						<h2>Logs</h2>
+						<p><small>Just like for messages, many status are available :</small></p>
+						<ul style="font-size: .80em">
+							<li>alert</li>
+							<li>critical</li>
+							<li>debug</li>
+							<li>emergency</li>
+							<li>error</li>
+							<li>failed</li>
+							<li>info</li>
+							<li>not_ok</li>
+							<li>notice</li>
+							<li>ok</li>
+							<li>passed</li>
+							<li>success</li>
+							<li>warning</li>
+						</ul>
+					</section>
+				</section>
+
 			</div>
 
 		</div>
