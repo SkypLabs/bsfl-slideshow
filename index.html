@@ -269,6 +269,30 @@ cidr2mask 24
 				</section>
 
 				<section>
+					<section>
+						<h2>Comparison</h2>
+						<p><small>Without BSFL :</small></p>
+						<pre><code data-trim style="font-size: 0.6em">
+echo $ntp | grep -Eq $regex_ipv4
+if [ "$?" -ne 0 ]
+then
+	echo $ntp | grep -Eq $regex_fqdn
+	if [ "$?" -ne 0 ]
+	then
+		echo "NTP address $ntp is not an IPv4 or FQDN" >> $logfile
+		exit 1
+	fi
+fi
+						</code></pre>
+						<p><small>With BSFL :</small></p>
+						<pre><code data-trim style="font-size: 0.6em">
+is_ipv4 $ntp || is_fqdn $ntp
+die_if_false $? "NTP address $ntp is not an IPv4 or a FQDN."
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
 					<p style="font-size: 1.4em">Get involved !</p>
 					<p style="font-size: .90em">Contributions are welcomed</p>
 				</section>
