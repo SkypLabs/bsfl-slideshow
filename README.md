@@ -1,6 +1,6 @@
 # BSFL Slide Show
 
-This repository contains a slide show made with [Reveal.js][2] for the [BSFL][1] project.
+This repository contains a slide show made with [Reveal.js][2] for introducing the [BSFL][1] project.
 
 ## License
 
