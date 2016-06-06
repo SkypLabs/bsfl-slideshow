@@ -1,0 +1,27 @@
+sudo: required
+
+language: ruby
+
+services:
+  - docker
+
+install: gem install html-proofer
+
+script: htmlproofer index.html
+
+env:
+  global:
+    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+
+before_deploy: docker run --rm -u $(id -u):$(id -g) -v $(pwd):/home astefanutti/decktape /home/index.html /home/Introduction_to_BSFL.pdf
+
+deploy:
+  provider: releases
+  api_key:
+    secure: 2RH6zgw76igIjtI8xhUqxLa0jLWJ9PPdqQ9A60I5sgruoeJAAjP+BghRhSLL52ApZWU5n3FbNCJX1haeihzExGqWr6fWFUDLjqaAMx9FQP2IswFUHRnOpOuO6SuHV7fS+f+4b3U/ru/jcDsyMUTvzrWo5CRDDJpD5PaWWo+cQ4+f+3nEEYKQNRsvTRKzaBjNw0+EoNDgYd0YUEGYlarahki5rZ1ybNCcUUf7a1x67qViwkcaIgmrFLLHg9xWccCE3xOv+gT4LkdGiTWOzamn8YicSjFG77vEumP/uGIuo2IKkMHa8/zOlxa6E5gz5oJAQYLCj5AavuFyIKf8Z4Oec7xCU0Xh+XGnenYkCuA0ANSoZ1cNKCt88mHWCMGZ91zxhbpFbFb8nEYNJgu6/Yc84/YdtqX2bBNIUPIqz8RU0Crmc/qEccfH5ksngiJp4VOeeYpepWDWUQM6ZkwBuX5ayRgiRiIt2XoWw42zrwKv0fbGmeNtyg1ko+DxA9Dr/EUYqsgXF0VjPXjlh9FE5xbTAc7L/cYkK3PsGMQOOufIG+ZWKTFEHWxSG9l0T4kI9mTtfliD1x3JtCrog/ak1wi6cnsasv1kSiXi5n0te9mf1wFySFIPZZ9PSJjnARkKRfi1XAuPElJInRSMNTHnfE8BR1R4eI0ZA5EYjC3S4N1vS1Q=
+  file: Introduction_to_BSFL.pdf
+  skip_cleanup: true
+  overwrite: true
+  on:
+    repo: SkypLabs/bsfl-slideshow
+    tags: true
