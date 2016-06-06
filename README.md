@@ -1,4 +1,6 @@
-# BSFL Slide Show
+# Introduction to BSFL
+
+[![Build Status](https://travis-ci.org/SkypLabs/bsfl-slideshow.svg)](https://travis-ci.org/SkypLabs/bsfl-slideshow)
 
 This repository contains a slide show made with [Reveal.js][2] for introducing the [BSFL][1] project.
 
