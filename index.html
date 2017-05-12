@@ -199,6 +199,10 @@ function."
 					</section>
 					<section>
 						<h2>Logs</h2>
+						<p><small>Log functions only work if the log feature is enabled :</small></p>
+						<pre><code data-trim>
+LOG_ENABLED=y
+						</code></pre>
 						<p><small>By default, the messages are logged in a file in the current directory :</small></p>
 						<pre><code data-trim>
 declare LOG_FILE="$0.log"
@@ -211,7 +215,7 @@ LOG_FILE="filename.log"
 					</section>
 					<section>
 						<h2>Logs</h2>
-						<p><small>You can even log standard messages :</small></p>
+						<p><small>If the log feature is enabled, standard messages are also logged :</small></p>
 						<pre><code data-trim>
 LOG_ENABLED=y
 msg "Thus, this message is logged in a file."
