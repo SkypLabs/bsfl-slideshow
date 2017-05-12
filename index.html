@@ -54,16 +54,16 @@
 				<section>
 					<h2>What is BSFL ?</h2>
 					<p class="fragment grow">One-file Bash library</p>
-					<p class="fragment grow">Free Open Source Software (<a href="http://opensource.org/licenses/BSD-3-Clause">New BSD</a>)</p>
+					<p class="fragment grow">Free open-source software (<a href="http://opensource.org/licenses/BSD-3-Clause">New BSD</a>)</p>
 					<p class="fragment grow">Forked from Louwrentius' work</p>
 				</section>
 
 				<section>
-					<h2>What can we do with that ?</h2>
+					<h2>What can we do with it ?</h2>
 					<p class="fragment grow">Display well-presented messages</p>
 					<p class="fragment grow">Log easily what your script does</p>
 					<p class="fragment grow">Handle commands' output</p>
-					<p class="fragment grow">Test network informations (IPv4, FQDN, ...)</p>
+					<p class="fragment grow">Test network information (IPv4, FQDN, ...)</p>
 					<p class="fragment grow">Use timers</p>
 					<p class="fragment grow">Manipulate arrays intuitively</p>
 					<p>...</p>
@@ -84,7 +84,7 @@
 				<section>
 					<section>
 						<h2>How to use it ?</h2>
-						<p>Use version 4 of Bash and include BSFL at the beginning of your script</p>
+						<p>Use version 4 of Bash and include BSFL at the beginning of your scripts</p>
 					</section>
 					<section>
 						<h2>Relative path</h2>
@@ -117,7 +117,7 @@ source /opt/bsfl/bsfl.sh
 						<h2>Messages</h2>
 						<p><small>Display a simple message :</small></p>
 						<pre><code data-trim>
-msg "This is a classic displayed message using 'msg' function."
+msg "I am a message displayed using the function msg."
 						</code></pre>
 						<figure><img src="img/msg_1.png" alt="simple message"></figure>
 					</section>
@@ -125,8 +125,8 @@ msg "This is a classic displayed message using 'msg' function."
 						<h2>Messages</h2>
 						<p><small>With a specific color :</small></p>
 						<pre><code data-trim>
-msg "This is a red displayed message using 'msg' function
-with color parameter." "$RED"
+msg "I am a red-colored message displayed using the function msg
+with a color parameter." "$RED"
 						</code></pre>
 						<figure><img src="img/msg_2.png" alt="message with color"></figure>
 					</section>
@@ -134,8 +134,8 @@ with color parameter." "$RED"
 						<h2>Messages</h2>
 						<p><small>With a status :</small></p>
 						<pre><code data-trim>
-msg_alert "This is a displayed message with its status using
-'msg_alert' function."
+msg_alert "I am an alert message displayed using the
+function msg_alert."
 						</code></pre>
 						<figure><img src="img/msg_3.png" alt="message with alert status"></figure>
 					</section>
@@ -165,7 +165,7 @@ msg_alert "This is a displayed message with its status using
 						<h2>Logs</h2>
 						<p><small>Log a simple message :</small></p>
 						<pre><code data-trim>
-log "This is a simple message to log."
+log "I am a message logged using the function log."
 						</code></pre>
 						<figure><img src="img/log_1.png" alt="log a simple message"></figure>
 					</section>
@@ -173,8 +173,8 @@ log "This is a simple message to log."
 						<h2>Logs</h2>
 						<p><small>With a status :</small></p>
 						<pre><code data-trim>
-log_critical "This is a logged message using 'log_critical'
-function."
+log_critical "I am a critical message logged using the
+function log_critical."
 						</code></pre>
 						<figure><img src="img/log_2.png" alt="log a critical message"></figure>
 					</section>
@@ -208,7 +208,7 @@ LOG_ENABLED=y
 declare LOG_FILE="$0.log"
 						</code></pre>
 						<p><small>For exemple, for <b>test.sh</b>, the log file will be <b>test.sh.log</b></small></p>
-						<p><small>You can overwrite this behavior :</small></p>
+						<p><small>You can override this behaviour :</small></p>
 						<pre><code data-trim>
 LOG_FILE="filename.log"
 						</code></pre>
@@ -232,12 +232,12 @@ msg "Thus, this message is logged in a file."
 cmd "ls -al"
 cmd "pnig 8.8.8.8"
 						</code></pre>
-						<p><small>The <b>cmd</b> function handles the output depending on the command's status :</small></p>
+						<p><small>The function <b>cmd</b> handles the output depending on the command's status :</small></p>
 						<figure><img src="img/cmd_1.png" alt="simple command"></figure>
 					</section>
 					<section>
 						<h2>Commands</h2>
-						<p><small>By default, the command's result is not displayed. To overwrite this behavior :</small></p>
+						<p><small>By default, the command's result is not displayed. To override this behaviour :</small></p>
 						<pre><code data-trim>
 DEBUG=y
 cmd "ls -al"
@@ -265,7 +265,7 @@ cmd "is_ipv4_subnet 192.168.1.0/24"
 					</section>
 					<section>
 						<h2>Network</h2>
-						<p><small>Test a FQDN address :</small></p>
+						<p><small>Test an FQDN address :</small></p>
 						<pre><code data-trim>
 cmd "is_fqdn www.example.net"
 						</code></pre>
