@@ -52,14 +52,14 @@
 				</section>
 
 				<section>
-					<h2>What is BSFL ?</h2>
+					<h2>What is BSFL?</h2>
 					<p class="fragment grow">One-file Bash library</p>
 					<p class="fragment grow">Free open-source software (<a href="http://opensource.org/licenses/BSD-3-Clause">New BSD</a>)</p>
 					<p class="fragment grow">Forked from Louwrentius' work</p>
 				</section>
 
 				<section>
-					<h2>What can we do with it ?</h2>
+					<h2>What can we do with it?</h2>
 					<p class="fragment grow">Display well-presented messages</p>
 					<p class="fragment grow">Log easily what your script does</p>
 					<p class="fragment grow">Handle commands' output</p>
@@ -70,20 +70,20 @@
 				</section>
 
 				<section>
-					<h2>Why BSFL ?</h2>
+					<h2>Why BSFL?</h2>
 					<p class="fragment grow">No libraries embedded with Bash</p>
 					<p class="fragment grow">Simple tasks can be hard to do with shell scripts</p>
 				</section>
 
 				<section>
-					<h2>Where to find it ?</h2>
+					<h2>Where to find it?</h2>
 					<p><a href="https://github.com/SkypLabs/bsfl">https://github.com/SkypLabs/bsfl</a>
 					</p>
 				</section>
 
 				<section>
 					<section>
-						<h2>How to use it ?</h2>
+						<h2>How to use it?</h2>
 						<p>Use version 4 of Bash and include BSFL at the beginning of your scripts</p>
 					</section>
 					<section>
@@ -115,7 +115,7 @@ source /opt/bsfl/bsfl.sh
 				<section>
 					<section>
 						<h2>Messages</h2>
-						<p><small>Display a simple message :</small></p>
+						<p><small>Display a simple message:</small></p>
 						<pre><code data-trim>
 msg "I am a message displayed using the function msg."
 						</code></pre>
@@ -123,7 +123,7 @@ msg "I am a message displayed using the function msg."
 					</section>
 					<section>
 						<h2>Messages</h2>
-						<p><small>With a specific color :</small></p>
+						<p><small>With a specific color:</small></p>
 						<pre><code data-trim>
 msg "I am a red-colored message displayed using the function msg
 with a color parameter." "$RED"
@@ -132,7 +132,7 @@ with a color parameter." "$RED"
 					</section>
 					<section>
 						<h2>Messages</h2>
-						<p><small>With a status :</small></p>
+						<p><small>With a status:</small></p>
 						<pre><code data-trim>
 msg_alert "I am an alert message displayed using the
 function msg_alert."
@@ -141,7 +141,7 @@ function msg_alert."
 					</section>
 					<section>
 						<h2>Messages</h2>
-						<p><small>Many status already exist :</small></p>
+						<p><small>Many status already exist:</small></p>
 						<ul style="font-size: .80em">
 							<li>alert</li>
 							<li>critical</li>
@@ -163,7 +163,7 @@ function msg_alert."
 				<section>
 					<section>
 						<h2>Logs</h2>
-						<p><small>Log a simple message :</small></p>
+						<p><small>Log a simple message:</small></p>
 						<pre><code data-trim>
 log "I am a message logged using the function log."
 						</code></pre>
@@ -171,7 +171,7 @@ log "I am a message logged using the function log."
 					</section>
 					<section>
 						<h2>Logs</h2>
-						<p><small>With a status :</small></p>
+						<p><small>With a status:</small></p>
 						<pre><code data-trim>
 log_critical "I am a critical message logged using the
 function log_critical."
@@ -180,7 +180,7 @@ function log_critical."
 					</section>
 					<section>
 						<h2>Logs</h2>
-						<p><small>Just like for messages, many status are available :</small></p>
+						<p><small>Just like for messages, many status are available:</small></p>
 						<ul style="font-size: .80em">
 							<li>alert</li>
 							<li>critical</li>
@@ -199,23 +199,23 @@ function log_critical."
 					</section>
 					<section>
 						<h2>Logs</h2>
-						<p><small>Log functions only work if the log feature is enabled :</small></p>
+						<p><small>Log functions only work if the log feature is enabled:</small></p>
 						<pre><code data-trim>
 LOG_ENABLED=y
 						</code></pre>
-						<p><small>By default, the messages are logged in a file in the current directory :</small></p>
+						<p><small>By default, the messages are logged in a file in the current directory:</small></p>
 						<pre><code data-trim>
 declare LOG_FILE="$0.log"
 						</code></pre>
 						<p><small>For exemple, for <b>test.sh</b>, the log file will be <b>test.sh.log</b></small></p>
-						<p><small>You can override this behaviour :</small></p>
+						<p><small>You can override this behaviour:</small></p>
 						<pre><code data-trim>
 LOG_FILE="filename.log"
 						</code></pre>
 					</section>
 					<section>
 						<h2>Logs</h2>
-						<p><small>If the log feature is enabled, standard messages are also logged :</small></p>
+						<p><small>If the log feature is enabled, standard messages are also logged:</small></p>
 						<pre><code data-trim>
 LOG_ENABLED=y
 msg "Thus, this message is logged in a file."
@@ -227,17 +227,17 @@ msg "Thus, this message is logged in a file."
 				<section>
 					<section>
 						<h2>Commands</h2>
-						<p><small>Execute a simple command :</small></p>
+						<p><small>Execute a simple command:</small></p>
 						<pre><code data-trim>
 cmd "ls -al"
 cmd "pnig 8.8.8.8"
 						</code></pre>
-						<p><small>The function <b>cmd</b> handles the output depending on the command's status :</small></p>
+						<p><small>The function <b>cmd</b> handles the output depending on the command's status:</small></p>
 						<figure><img src="img/cmd_1.png" alt="simple command"></figure>
 					</section>
 					<section>
 						<h2>Commands</h2>
-						<p><small>By default, the command's result is not displayed. To override this behaviour :</small></p>
+						<p><small>By default, the command's result is not displayed. To override this behaviour:</small></p>
 						<pre><code data-trim>
 DEBUG=y
 cmd "ls -al"
@@ -249,7 +249,7 @@ cmd "ls -al"
 				<section>
 					<section>
 						<h2>Network</h2>
-						<p><small>Test an IPv4 :</small></p>
+						<p><small>Test an IPv4:</small></p>
 						<pre><code data-trim>
 cmd "is_ipv4 8.8.8.8"
 						</code></pre>
@@ -257,7 +257,7 @@ cmd "is_ipv4 8.8.8.8"
 					</section>
 					<section>
 						<h2>Network</h2>
-						<p><small>Test an IPv4 subnet :</small></p>
+						<p><small>Test an IPv4 subnet:</small></p>
 						<pre><code data-trim>
 cmd "is_ipv4_subnet 192.168.1.0/24"
 						</code></pre>
@@ -265,7 +265,7 @@ cmd "is_ipv4_subnet 192.168.1.0/24"
 					</section>
 					<section>
 						<h2>Network</h2>
-						<p><small>Test an FQDN address :</small></p>
+						<p><small>Test an FQDN address:</small></p>
 						<pre><code data-trim>
 cmd "is_fqdn www.example.net"
 						</code></pre>
@@ -273,7 +273,7 @@ cmd "is_fqdn www.example.net"
 					</section>
 					<section>
 						<h2>Network</h2>
-						<p><small>Convert an IPv4 mask into CIDR and vice versa :</small></p>
+						<p><small>Convert an IPv4 mask into CIDR and vice versa:</small></p>
 						<pre><code data-trim>
 mask2cidr 255.255.255.0
 cidr2mask 24
@@ -283,15 +283,15 @@ cidr2mask 24
 				</section>
 
 				<section>
-					<p style="font-size: 1.4em">Many other features !</p>
-					<p style="font-size: .90em">Take a look at the online Doxygen documentation :</p>
+					<p style="font-size: 1.4em">Many other features!</p>
+					<p style="font-size: .90em">Take a look at the online Doxygen documentation:</p>
 					<p><a href="http://skyplabs.github.io/bsfl/">http://skyplabs.github.io/bsfl/</a></p>
 				</section>
 
 				<section>
 					<section>
 						<h2>Comparison</h2>
-						<p><small>Without BSFL :</small></p>
+						<p><small>Without BSFL:</small></p>
 						<pre><code data-trim style="font-size: 0.6em">
 echo $ntp | grep -Eq $regex_ipv4
 if [ "$?" -ne 0 ]
@@ -304,7 +304,7 @@ then
 	fi
 fi
 						</code></pre>
-						<p><small>With BSFL :</small></p>
+						<p><small>With BSFL:</small></p>
 						<pre><code data-trim style="font-size: 0.6em">
 is_ipv4 $ntp || is_fqdn $ntp
 die_if_false $? "NTP address $ntp is not an IPv4 or a FQDN."
@@ -313,7 +313,7 @@ die_if_false $? "NTP address $ntp is not an IPv4 or a FQDN."
 				</section>
 
 				<section>
-					<p style="font-size: 1.4em">Get involved !</p>
+					<p style="font-size: 1.4em">Get involved!</p>
 					<p style="font-size: .90em">Contributions are welcomed</p>
 				</section>
 
