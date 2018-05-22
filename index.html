@@ -1,353 +1,348 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>BSFL - Bash Shell Function Library</title>
+    <title>BSFL - Bash Shell Function Library</title>
 
-		<meta name="description" content="Bash Shell Function Library">
-		<meta name="author" content="Paul-Emmanuel Raoul">
+    <meta name="description" content="Bash Shell Function Library">
+    <meta name="author" content="Paul-Emmanuel Raoul">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
 
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+    <link rel="stylesheet" href="css/asciinema-player.css">
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
 
-	<body>
+    <!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
 
-		<div class="reveal">
+  <body>
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>BSFL</h1>
-					<h3>Bash Shell Function Library</h3>
-					<p>
-						<small>Created by <a href="https://blog.skyplabs.net">Paul-Emmanuel Raoul</a> / <a href="mailto:skyper@skyplabs.net">skyper@skyplabs.net</a> / <a href="https://twitter.com/SkypLabs">@SkypLabs</a></small>
-					</p>
-					<p style="margin-top: .5em">
-						<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
-					</p>
-				</section>
+    <div class="reveal">
 
-				<section>
-					<h2>What is BSFL?</h2>
-					<p class="fragment grow">One-file Bash library</p>
-					<p class="fragment grow">Free open-source software (<a href="https://opensource.org/licenses/BSD-3-Clause">New BSD</a>)</p>
-					<p class="fragment grow">Forked from Louwrentius' work</p>
-				</section>
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>BSFL</h1>
+          <h3>Bash Shell Function Library</h3>
+          <p>
+          <small>Created by <a href="https://blog.skyplabs.net">Paul-Emmanuel Raoul</a> / <a href="mailto:skyper@skyplabs.net">skyper@skyplabs.net</a> / <a href="https://twitter.com/SkypLabs">@SkypLabs</a></small>
+          </p>
+          <p style="margin-top: .5em">
+          <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+          </p>
+        </section>
 
-				<section>
-					<h2>What can we do with it?</h2>
-					<p class="fragment grow">Display well-presented messages</p>
-					<p class="fragment grow">Log easily what your script does</p>
-					<p class="fragment grow">Handle commands' output</p>
-					<p class="fragment grow">Test network information (IPv4, FQDN, ...)</p>
-					<p class="fragment grow">Use timers</p>
-					<p class="fragment grow">Manipulate arrays intuitively</p>
-					<p>...</p>
-				</section>
+        <section>
+          <h2>What is BSFL?</h2>
+          <p class="fragment grow">One-file Bash library</p>
+          <p class="fragment grow">Free open-source software (<a href="https://opensource.org/licenses/BSD-3-Clause">New BSD</a>)</p>
+          <p class="fragment grow">Forked from Louwrentius' work</p>
+        </section>
 
-				<section>
-					<h2>Why BSFL?</h2>
-					<p class="fragment grow">No libraries embedded with Bash</p>
-					<p class="fragment grow">Simple tasks can be hard to do with shell scripts</p>
-				</section>
+        <section>
+          <h2>What can we do with it?</h2>
+          <p class="fragment grow">Display well-presented messages</p>
+          <p class="fragment grow">Log easily what your script does</p>
+          <p class="fragment grow">Handle commands' output</p>
+          <p class="fragment grow">Test network information (IPv4, FQDN, ...)</p>
+          <p class="fragment grow">Use timers</p>
+          <p class="fragment grow">Manipulate arrays intuitively</p>
+          <p>...</p>
+        </section>
 
-				<section>
-					<h2>Where to find it?</h2>
-					<p><a href="https://github.com/SkypLabs/bsfl">https://github.com/SkypLabs/bsfl</a>
-					</p>
-				</section>
+        <section>
+          <h2>Why BSFL?</h2>
+          <p class="fragment grow">No libraries embedded with Bash</p>
+          <p class="fragment grow">Simple tasks can be hard to do with shell scripts</p>
+        </section>
 
-				<section>
-					<section>
-						<h2>How to use it?</h2>
-						<p>Use version 4 of Bash and include BSFL at the beginning of your scripts</p>
-					</section>
-					<section>
-						<h2>Relative path</h2>
-						<pre><code data-trim>
-#!/bin/bash
+        <section>
+          <h2>Where to find it?</h2>
+          <p><a href="https://github.com/SkypLabs/bsfl">https://github.com/SkypLabs/bsfl</a>
+          </p>
+        </section>
+
+        <section>
+          <section>
+            <h2>How to use it?</h2>
+            <p>Use version 4 of Bash and include BSFL at the beginning of your scripts</p>
+          </section>
+          <section>
+            <h2>Relative path</h2>
+            <pre><code data-trim>
+#!/usr/bin/env bash
 
 declare -r DIR=$(cd "$(dirname "$0")" && pwd)
 source $DIR/../lib/bsfl.sh
-						</code></pre>
-					</section>
-					<section>
-						<h2>Absolute path</h2>
-						<pre><code data-trim>
-#!/bin/bash
+            </code></pre>
+          </section>
+          <section>
+            <h2>Absolute path</h2>
+            <pre><code data-trim>
+#!/usr/bin/env bash
 
 source /opt/bsfl/bsfl.sh
-						</code></pre>
-					</section>
-				</section>
+            </code></pre>
+          </section>
+        </section>
 
-				<section>
-					<section>
-						<h2>Examples</h2>
-						<p >Take a look at the <a href="https://github.com/SkypLabs/bsfl/tree/master/examples">examples</a> directory</p>
-					</section>
-				</section>
+        <section>
+          <section>
+            <h2>Examples</h2>
+            <p >Take a look at the <a href="https://github.com/SkypLabs/bsfl/tree/master/examples">examples</a> directory</p>
+          </section>
+        </section>
 
-				<section>
-					<section>
-						<h2>Messages</h2>
-						<p><small>Display a simple message:</small></p>
-						<pre><code data-trim>
-msg "I am a message displayed using the function msg."
-						</code></pre>
-						<figure><img src="img/msg_1.png" alt="simple message"></figure>
-					</section>
-					<section>
-						<h2>Messages</h2>
-						<p><small>With a specific color:</small></p>
-						<pre><code data-trim>
-msg "I am a red-colored message displayed using the function msg
-with a color parameter." "$RED"
-						</code></pre>
-						<figure><img src="img/msg_2.png" alt="message with color"></figure>
-					</section>
-					<section>
-						<h2>Messages</h2>
-						<p><small>With a status:</small></p>
-						<pre><code data-trim>
-msg_alert "I am an alert message displayed using the
-function msg_alert."
-						</code></pre>
-						<figure><img src="img/msg_3.png" alt="message with alert status"></figure>
-					</section>
-					<section>
-						<h2>Messages</h2>
-						<p><small>Many status already exist:</small></p>
-						<ul style="font-size: .80em">
-							<li>alert</li>
-							<li>critical</li>
-							<li>debug</li>
-							<li>emergency</li>
-							<li>error</li>
-							<li>failed</li>
-							<li>info</li>
-							<li>not_ok</li>
-							<li>notice</li>
-							<li>ok</li>
-							<li>passed</li>
-							<li>success</li>
-							<li>warning</li>
-						</ul>
-					</section>
-				</section>
+        <section>
+          <section>
+            <h2>Messages</h2>
+            <p><small>Display a simple message:</small></p>
+            <pre><code data-trim>
+msg "Hello, World!"
+            </code></pre>
+            <asciinema-player src="cast/msg_1.cast" rows="12"></asciinema-player>
+          </section>
+          <section>
+            <h2>Messages</h2>
+            <p><small>With a specific colour:</small></p>
+            <pre><code data-trim>
+msg "Hello, World!" "$RED"
+            </code></pre>
+            <asciinema-player src="cast/msg_2.cast" rows="12"></asciinema-player>
+          </section>
+          <section>
+            <h2>Messages</h2>
+            <p><small>With a status:</small></p>
+            <pre><code data-trim>
+msg_alert "Hello, World!"
+            </code></pre>
+            <asciinema-player src="cast/msg_3.cast" rows="12"></asciinema-player>
+          </section>
+          <section>
+            <h2>Messages</h2>
+            <p><small>Many status already exist:</small></p>
+            <ul style="font-size: .60em">
+              <li>alert</li>
+              <li>critical</li>
+              <li>debug</li>
+              <li>emergency</li>
+              <li>error</li>
+              <li>failed</li>
+              <li>info</li>
+              <li>not_ok</li>
+              <li>notice</li>
+              <li>ok</li>
+              <li>passed</li>
+              <li>success</li>
+              <li>warning</li>
+            </ul>
+          </section>
+        </section>
 
-				<section>
-					<section>
-						<h2>Logs</h2>
-						<p><small>Log a simple message:</small></p>
-						<pre><code data-trim>
-log "I am a message logged using the function log."
-						</code></pre>
-						<figure><img src="img/log_1.png" alt="log a simple message"></figure>
-					</section>
-					<section>
-						<h2>Logs</h2>
-						<p><small>With a status:</small></p>
-						<pre><code data-trim>
-log_critical "I am a critical message logged using the
-function log_critical."
-						</code></pre>
-						<figure><img src="img/log_2.png" alt="log a critical message"></figure>
-					</section>
-					<section>
-						<h2>Logs</h2>
-						<p><small>Just like for messages, many status are available:</small></p>
-						<ul style="font-size: .80em">
-							<li>alert</li>
-							<li>critical</li>
-							<li>debug</li>
-							<li>emergency</li>
-							<li>error</li>
-							<li>failed</li>
-							<li>info</li>
-							<li>not_ok</li>
-							<li>notice</li>
-							<li>ok</li>
-							<li>passed</li>
-							<li>success</li>
-							<li>warning</li>
-						</ul>
-					</section>
-					<section>
-						<h2>Logs</h2>
-						<p><small>Log functions only work if the log feature is enabled:</small></p>
-						<pre><code data-trim>
+        <section>
+          <section>
+            <h2>Logs</h2>
+            <p><small>Log a simple message:</small></p>
+            <pre><code data-trim>
+log "Hello, World!"
+            </code></pre>
+            <asciinema-player src="cast/log_1.cast" rows="12"></asciinema-player>
+          </section>
+          <section>
+            <h2>Logs</h2>
+            <p><small>With a status:</small></p>
+            <pre><code data-trim>
+log_critical "Hello, World!"
+            </code></pre>
+            <asciinema-player src="cast/log_2.cast" rows="12"></asciinema-player>
+          </section>
+          <section>
+            <h2>Logs</h2>
+            <p><small>Just like for messages, many status are available:</small></p>
+            <ul style="font-size: .60em">
+              <li>alert</li>
+              <li>critical</li>
+              <li>debug</li>
+              <li>emergency</li>
+              <li>error</li>
+              <li>failed</li>
+              <li>info</li>
+              <li>not_ok</li>
+              <li>notice</li>
+              <li>ok</li>
+              <li>passed</li>
+              <li>success</li>
+              <li>warning</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Logs</h2>
+            <p><small>Log functions only work if the log feature is enabled:</small></p>
+            <pre><code data-trim>
 LOG_ENABLED=y
-						</code></pre>
-						<p><small>By default, the messages are logged in a file in the current directory:</small></p>
-						<pre><code data-trim>
+            </code></pre>
+            <p><small>By default, the messages are logged in a file in the current directory:</small></p>
+            <pre><code data-trim>
 declare LOG_FILE="$0.log"
-						</code></pre>
-						<p><small>For exemple, for <b>test.sh</b>, the log file will be <b>test.sh.log</b></small></p>
-						<p><small>You can override this behaviour:</small></p>
-						<pre><code data-trim>
+            </code></pre>
+            <p><small>For exemple, for <b>test.sh</b>, the log file will be <b>test.sh.log</b></small></p>
+            <p><small>You can override this behaviour:</small></p>
+            <pre><code data-trim>
 LOG_FILE="filename.log"
-						</code></pre>
-					</section>
-					<section>
-						<h2>Logs</h2>
-						<p><small>If the log feature is enabled, standard messages are also logged:</small></p>
-						<pre><code data-trim>
-LOG_ENABLED=y
-msg "Thus, this message is logged in a file."
-						</code></pre>
-						<figure><img src="img/log_3.png" alt="log a standard message"></figure>
-					</section>
-				</section>
+            </code></pre>
+          </section>
+          <section>
+            <h2>Logs</h2>
+            <p><small>If the log feature is enabled, standard messages are also logged:</small></p>
+            <asciinema-player src="cast/log_3.cast" rows="12"></asciinema-player>
+          </section>
+        </section>
 
-				<section>
-					<section>
-						<h2>Commands</h2>
-						<p><small>Execute a simple command:</small></p>
-						<pre><code data-trim>
+        <section>
+          <section>
+            <h2>Commands</h2>
+            <p><small>Execute a simple command:</small></p>
+            <pre><code data-trim>
 cmd "ls -al"
 cmd "pnig 8.8.8.8"
-						</code></pre>
-						<p><small>The function <b>cmd</b> handles the output depending on the command's status:</small></p>
-						<figure><img src="img/cmd_1.png" alt="simple command"></figure>
-					</section>
-					<section>
-						<h2>Commands</h2>
-						<p><small>By default, the command's result is not displayed. To override this behaviour:</small></p>
-						<pre><code data-trim>
+            </code></pre>
+            <p><small>The function <b>cmd</b> handles the output depending on the command's status:</small></p>
+            <asciinema-player src="cast/cmd_1.cast" rows="12"></asciinema-player>
+          </section>
+          <section>
+            <h2>Commands</h2>
+            <p><small>By default, the command's result is not displayed. To override this behaviour:</small></p>
+            <pre><code data-trim>
 DEBUG=y
-cmd "ls -al"
-						</code></pre>
-						<figure><img src="img/cmd_2.png" alt="command with debug output"></figure>
-					</section>
-				</section>
+            </code></pre>
+            <asciinema-player src="cast/cmd_2.cast" rows="12"></asciinema-player>
+          </section>
+        </section>
 
-				<section>
-					<section>
-						<h2>Network</h2>
-						<p><small>Test an IPv4:</small></p>
-						<pre><code data-trim>
+        <section>
+          <section>
+            <h2>Network</h2>
+            <p><small>Test an IPv4:</small></p>
+            <pre><code data-trim>
 cmd "is_ipv4 8.8.8.8"
-						</code></pre>
-						<figure><img src="img/network_1.png" alt="test an IPv4 address"></figure>
-					</section>
-					<section>
-						<h2>Network</h2>
-						<p><small>Test an IPv4 subnet:</small></p>
-						<pre><code data-trim>
+            </code></pre>
+            <asciinema-player src="cast/net_1.cast" rows="12"></asciinema-player>
+          </section>
+          <section>
+            <h2>Network</h2>
+            <p><small>Test an IPv4 subnet:</small></p>
+            <pre><code data-trim>
 cmd "is_ipv4_subnet 192.168.1.0/24"
-						</code></pre>
-						<figure><img src="img/network_2.png" alt="test an IPv4 subnet"></figure>
-					</section>
-					<section>
-						<h2>Network</h2>
-						<p><small>Test an FQDN address:</small></p>
-						<pre><code data-trim>
+            </code></pre>
+            <asciinema-player src="cast/net_2.cast" rows="12"></asciinema-player>
+          </section>
+          <section>
+            <h2>Network</h2>
+            <p><small>Test an FQDN address:</small></p>
+            <pre><code data-trim>
 cmd "is_fqdn www.example.net"
-						</code></pre>
-						<figure><img src="img/network_3.png" alt="test a FQDN address"></figure>
-					</section>
-					<section>
-						<h2>Network</h2>
-						<p><small>Convert an IPv4 mask into CIDR and vice versa:</small></p>
-						<pre><code data-trim>
+            </code></pre>
+            <asciinema-player src="cast/net_3.cast" rows="12"></asciinema-player>
+          </section>
+          <section>
+            <h2>Network</h2>
+            <p><small>Convert an IPv4 mask into CIDR and vice versa:</small></p>
+            <pre><code data-trim>
 mask2cidr 255.255.255.0
 cidr2mask 24
-						</code></pre>
-						<figure><img src="img/network_4.png" alt="convert an IPv4 mask into CIDR and vice versa"></figure>
-					</section>
-				</section>
+            </code></pre>
+            <asciinema-player src="cast/net_4.cast" rows="12"></asciinema-player>
+          </section>
+        </section>
 
-				<section>
-					<p style="font-size: 1.4em">Many other features!</p>
-					<p style="font-size: .90em">Take a look at the online Doxygen documentation:</p>
-					<p><a href="https://skyplabs.github.io/bsfl/">https://skyplabs.github.io/bsfl/</a></p>
-				</section>
+        <section>
+          <p style="font-size: 1.4em">Many other features!</p>
+          <p style="font-size: .90em">Take a look at the online Doxygen documentation:</p>
+          <p><a href="https://skyplabs.github.io/bsfl/">https://skyplabs.github.io/bsfl/</a></p>
+        </section>
 
-				<section>
-					<section>
-						<h2>Comparison</h2>
-						<p><small>Without BSFL:</small></p>
-						<pre><code data-trim style="font-size: 0.6em">
+        <section>
+          <section>
+            <h2>Comparison</h2>
+            <p><small>Without BSFL:</small></p>
+            <pre><code data-trim style="font-size: 0.6em">
 echo $ntp | grep -Eq $regex_ipv4
 if [ "$?" -ne 0 ]
 then
-	echo $ntp | grep -Eq $regex_fqdn
-	if [ "$?" -ne 0 ]
-	then
-		echo "NTP address $ntp is not an IPv4 or FQDN" >> $logfile
-		exit 1
-	fi
+  echo $ntp | grep -Eq $regex_fqdn
+  if [ "$?" -ne 0 ]
+  then
+    echo "NTP address $ntp is not an IPv4 or FQDN" >> $logfile
+    exit 1
+  fi
 fi
-						</code></pre>
-						<p><small>With BSFL:</small></p>
-						<pre><code data-trim style="font-size: 0.6em">
+            </code></pre>
+            <p><small>With BSFL:</small></p>
+            <pre><code data-trim style="font-size: 0.6em">
 is_ipv4 $ntp || is_fqdn $ntp
 die_if_false $? "NTP address $ntp is not an IPv4 or a FQDN."
-						</code></pre>
-					</section>
-				</section>
+            </code></pre>
+          </section>
+        </section>
 
-				<section>
-					<p style="font-size: 1.4em">Get involved!</p>
-					<p style="font-size: .90em">Contributions are welcomed</p>
-				</section>
+        <section>
+          <p style="font-size: 1.4em">Get involved!</p>
+          <p style="font-size: .90em">Contributions are welcomed</p>
+        </section>
 
-			</div>
+      </div>
 
-		</div>
+    </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/asciinema-player.js"></script>
 
-		<script>
+    <script>
 
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
+        // Optional reveal.js plugins
+        dependencies: [
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true },
+        { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
 
-		</script>
+    </script>
 
-	</body>
+  </body>
 </html>
