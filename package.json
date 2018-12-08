@@ -7,7 +7,7 @@
   "license": "CC-BY-NC-4.0",
   "private": true,
   "dependencies": {
-    "reveal.js": "^3.6.0"
+    "reveal.js": "^3.7.0"
   },
   "scripts": {
     "install": "for dir in css js lib plugin; do cp -r node_modules/reveal.js/${dir}/* ${dir}; done"
