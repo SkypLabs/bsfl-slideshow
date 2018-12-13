@@ -1,15 +1,16 @@
 {
   "name": "bsfl-slideshow",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Introduction to BSFL",
   "repository": "git@github.com:SkypLabs/bsfl-slideshow.git",
   "author": "Paul-Emmanuel Raoul <skyper@skyplabs.net>",
   "license": "CC-BY-NC-4.0",
   "private": true,
   "dependencies": {
-    "reveal.js": "^3.6.0"
+    "asciinema-player": "^2.6.1",
+    "reveal.js": "^3.7.0"
   },
   "scripts": {
-    "install": "for dir in css js lib plugin; do cp -r node_modules/reveal.js/${dir}/* ${dir}; done"
+    "install": "npm-scripts/install.sh"
   }
 }
