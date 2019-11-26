@@ -28,3 +28,7 @@ deploy:
   on:
     repo: SkypLabs/bsfl-slideshow
     tags: true
+
+notifications:
+  email:
+    on_success: never
