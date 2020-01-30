@@ -8,7 +8,7 @@
   "private": true,
   "dependencies": {
     "asciinema-player": "^2.6.1",
-    "reveal.js": "^3.8.0"
+    "reveal.js": "^3.9.1"
   },
   "scripts": {
     "install": "npm-scripts/install.sh"
