@@ -6,6 +6,6 @@ asciinema-player@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/asciinema-player/-/asciinema-player-2.6.1.tgz#3874c3ea5bb36583ed032a7b712af74c19c2b940"
 
-reveal.js@^3.9.2:
-  version "3.9.2"
-  resolved "https://registry.yarnpkg.com/reveal.js/-/reveal.js-3.9.2.tgz#7f63d3dfec338b6c313dcabdf006e8cf80e0b358"
+reveal.js@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/reveal.js/-/reveal.js-4.0.1.tgz#0ef7f7a4e5707165bf784a57cec58171f6af3550"
