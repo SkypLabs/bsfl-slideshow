@@ -1,16 +1,21 @@
 #!/usr/bin/env sh
 
-DIR=$(cd "$(dirname "$0")" && pwd)
+ROOT=$(cd "$(dirname "$0")" && pwd)
 
 install_asciinema_player() {
-    cp "${DIR}"/../node_modules/asciinema-player/resources/public/js/*.js js
-    cp "${DIR}"/../node_modules/asciinema-player/resources/public/css/*.css css
+  for dir in css js; do
+    mkdir -p ${dir}
+    rm -rf ${dir}/*
+    cp "${ROOT}"/../node_modules/asciinema-player/resources/public/${dir}/* ${dir}
+  done
 }
 
 install_revealjs() {
-    for dir in css js lib plugin; do
-        cp -r "${DIR}"/../node_modules/reveal.js/${dir}/* ${dir}
-    done
+  for dir in dist plugin; do
+    mkdir -p ${dir}
+    rm -rf ${dir}/*
+    cp -r "${ROOT}"/../node_modules/reveal.js/${dir}/* ${dir}
+  done
 }
 
 install_asciinema_player
