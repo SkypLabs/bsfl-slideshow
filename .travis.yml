@@ -14,7 +14,7 @@ services:
 
 install: gem install html-proofer
 
-script: htmlproofer index.html
+script: "htmlproofer --only-4xx --typhoeus-config '{\"headers\": {\"User-agent\": \"Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:84.0) Gecko/20100101 Firefox/84.0\"}}' index.html"
 
 before_deploy: docker run --rm -u $(id -u):$(id -g) -v $(pwd):/home astefanutti/decktape /home/index.html /home/Introduction_to_BSFL.pdf
 
