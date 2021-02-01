@@ -38,16 +38,16 @@
         <section>
           <h2>What is BSFL?</h2>
           <p class="fragment grow">One-file Bash library</p>
-          <p class="fragment grow">Free open-source software (<a href="https://opensource.org/licenses/BSD-3-Clause">New BSD</a>)</p>
+          <p class="fragment grow">Free and open-source software (<a href="https://opensource.org/licenses/BSD-3-Clause">New BSD</a>)</p>
           <p class="fragment grow">Forked from Louwrentius' work</p>
         </section>
 
         <section>
           <h2>What can we do with it?</h2>
           <p class="fragment grow">Display well-presented messages</p>
-          <p class="fragment grow">Log easily what your script does</p>
+          <p class="fragment grow">Log easily what your scripts do</p>
           <p class="fragment grow">Handle commands' output</p>
-          <p class="fragment grow">Test network information (IPv4, FQDN, ...)</p>
+          <p class="fragment grow">Test network information (IPv4, FQDN...)</p>
           <p class="fragment grow">Use timers</p>
           <p class="fragment grow">Manipulate arrays intuitively</p>
           <p>...</p>
@@ -55,8 +55,8 @@
 
         <section>
           <h2>Why BSFL?</h2>
-          <p class="fragment grow">No libraries embedded with Bash</p>
-          <p class="fragment grow">Simple tasks can be hard to do with shell scripts</p>
+          <p class="fragment grow">No libraries shipped with Bash</p>
+          <p class="fragment grow">Simple tasks can be difficult to achieve with shell scripts somethimes</p>
         </section>
 
         <section>
@@ -68,7 +68,7 @@
         <section>
           <section>
             <h2>How to use it?</h2>
-            <p>Use version 4 of Bash and include BSFL at the beginning of your scripts</p>
+            <p>Use Bash 4+ and include BSFL at the beginning of your scripts</p>
           </section>
           <section>
             <h2>Relative path</h2>
@@ -180,11 +180,11 @@ log_critical "Hello, World!"
           </section>
           <section>
             <h2>Logs</h2>
-            <p><small>Log functions only work if the log feature is enabled:</small></p>
+            <p><small>Functions' output is logged only if the logging feature is enabled:</small></p>
             <pre><code data-trim>
 LOG_ENABLED=y
             </code></pre>
-            <p><small>By default, the messages are logged in a file in the current directory:</small></p>
+            <p><small>By default, log messages are written into a file in the current directory:</small></p>
             <pre><code data-trim>
 declare LOG_FILE="$0.log"
             </code></pre>
@@ -196,7 +196,7 @@ LOG_FILE="filename.log"
           </section>
           <section>
             <h2>Logs</h2>
-            <p><small>If the log feature is enabled, standard messages are also logged:</small></p>
+            <p><small>If the logging feature is enabled, standard messages are also logged:</small></p>
             <asciinema-player src="cast/log_3.cast" rows="18" cols="120"></asciinema-player>
           </section>
         </section>
@@ -209,12 +209,12 @@ LOG_FILE="filename.log"
 cmd "ls -al"
 cmd "pnig 8.8.8.8"
             </code></pre>
-            <p><small>The function <b>cmd</b> handles the output depending on the command's status:</small></p>
+            <p><small>The function <b>cmd</b> handles the output depending on the command's exit status:</small></p>
             <asciinema-player src="cast/cmd_1.cast" rows="18" cols="120"></asciinema-player>
           </section>
           <section>
             <h2>Commands</h2>
-            <p><small>By default, the command's result is not displayed. To override this behaviour:</small></p>
+            <p><small>By default, the command's output is not displayed. To override this behaviour:</small></p>
             <pre><code data-trim>
 DEBUG=y
             </code></pre>
@@ -270,12 +270,10 @@ cidr2mask 24
             <p><small>Without BSFL:</small></p>
             <pre><code data-trim style="font-size: 0.6em">
 echo $ntp | grep -Eq $regex_ipv4
-if [ "$?" -ne 0 ]
-then
+if [ "$?" -ne 0 ]; then
   echo $ntp | grep -Eq $regex_fqdn
-  if [ "$?" -ne 0 ]
-  then
-    echo "NTP address $ntp is not an IPv4 or FQDN" >> $logfile
+  if [ "$?" -ne 0 ]; then
+    echo "NTP address $ntp is not an IPv4 nor an FQDN" >> $logfile
     exit 1
   fi
 fi
@@ -283,7 +281,7 @@ fi
             <p><small>With BSFL:</small></p>
             <pre><code data-trim style="font-size: 0.6em">
 is_ipv4 $ntp || is_fqdn $ntp
-die_if_false $? "NTP address $ntp is not an IPv4 or a FQDN."
+die_if_false $? "NTP address $ntp is not an IPv4 nor an FQDN."
             </code></pre>
           </section>
         </section>
