@@ -1,5 +1,3 @@
-sudo: required
-
 language: ruby
 
 env:
@@ -16,7 +14,7 @@ services:
 
 install: gem install html-proofer
 
-script: htmlproofer index.html
+script: "htmlproofer --only-4xx --typhoeus-config '{\"headers\": {\"User-agent\": \"Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:84.0) Gecko/20100101 Firefox/84.0\"}}' index.html"
 
 before_deploy: docker run --rm -u $(id -u):$(id -g) -v $(pwd):/home astefanutti/decktape /home/index.html /home/Introduction_to_BSFL.pdf
 
@@ -25,8 +23,12 @@ deploy:
   api_key:
     secure: "Fl7Ai5kroLiB1ERtOSmyMSOwavmrPsZ6IDwRheqmLnaG42xVrlBRoQdwRm5MM4UmTNxYKz4P9m/mjyfErsvPo85Mt+++hM8KJGYaDQCiOxuaT79/JuqfKhCG5LCbdI6iPhtb4zU7VEN2odN2RXe0VkbLwX1Z7rHg8AEAGeYhfCmRFfh0w1ZN3yHpLY5FVLxGSuGOTMBA6iRq/iGAxUOTs/um4yVzK3rO/16lu8iyW0dn9yl8h9ous67MmIlx09SuTCkCtHIM97uvGH2WlDYpv+eaosxawlPwk29LIZBX6MbgV2ivMlYhC4NvTrwcf3XAqei8FRKzLEd6HcLdhQKms3qPpGCI8tYg9K/axG59NMWn9NgwZe/VMU1+DXHc3RVKyDbkbOlZeiqfIDZos38RTBMLe+/VinOIs6YLegBBlqfrwqXzzDFxqSsrgYIgXJcV7Kvm1s1Kej3YYz0IFIduolFwmtBa312uLBq4DQz9ReVo0Me7AZMQkIiP/x44AlWw9yIsf9Cqc8rOxeyku697Cd6X9iID4o3yWXtWasEFgQkBvBVQO0MMH04Z2BH8WenJQlw62POkNVXtXGq7qNpeDrYMYCvicpv7TmmOLAADqQGDYaLLz/mNqYlqf/fTQkaLOwHGN0k0q5sLn1s71HsYrQnLlI4Md6mtZEFjeX9qxO4="
   file: Introduction_to_BSFL.pdf
-  skip_cleanup: true
+  cleanup: false
   overwrite: true
   on:
     repo: SkypLabs/bsfl-slideshow
     tags: true
+
+notifications:
+  email:
+    on_success: never
