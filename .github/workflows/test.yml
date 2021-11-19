@@ -1,0 +1,20 @@
+name: Test
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  build-website:
+    name: Build Website
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Check HTML
+        uses: chabad360/htmlproofer@master
+        with:
+          directory: "./"
+          arguments: "--only-4xx"
