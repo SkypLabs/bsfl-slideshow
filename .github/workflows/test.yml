@@ -13,6 +13,14 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: yarn install
+
       - name: Check HTML
         uses: chabad360/htmlproofer@master
         with:
